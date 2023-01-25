@@ -240,7 +240,7 @@ const protocolCheck = (uri, failCb, successCb, timeout = 2000, unsupportedCb) =>
         openUriUsingFirefox(uri, failCallback, successCallback);
       }
     } else if (browser.isChrome()) {
-      openUriWithTimeoutHack(uri, failCallback, successCallback);
+      openUriWithHiddenFrame(uri, failCallback, successCallback);
     } else if (browser.isOSX()) {
       openUriWithHiddenFrame(uri, failCallback, successCallback);
     } else {
